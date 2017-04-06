@@ -1,6 +1,6 @@
 {
   "name": "swagger-yaml-inject",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Dinamically injects Swagger's YAML definitions into a bundle.",
   "main": "index.js",
   "scripts": {

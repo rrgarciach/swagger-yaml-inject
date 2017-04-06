@@ -1,3 +1,4 @@
+const fs = require('fs');
 const replaceString = require('replace-string');
 
 module.exports = exports = function (specsPath) {
@@ -31,7 +32,7 @@ module.exports = exports = function (specsPath) {
 
 	    let replacedString = replaceString(replaceString(indexDocStr, '%paths%', paths), '%definitions%', definitions);
 
-	    fs.writeFileSync(this.specsPath + '/index.yaml', replacedString, {encoding: 'utf8'});
+	    fs.writeFileSync(specsPath + '/index.yaml', replacedString, {encoding: 'utf8'});
 
 	} catch (e) {
 	    console.error(e);
