@@ -1,7 +1,12 @@
 const replaceString = require('replace-string');
 
 module.exports = exports = function (specsPath) {
-	if (specsPath === undefined) return console.error('ERROR: No specifications path defined.');
+	// Validate if path has been given:
+	if (specsPath === undefined) {
+		console.error('ERROR: No specifications path defined.');
+		return;
+	}
+
 	// Get document, or throw exception on error
 	try {
 	    let indexDocStr = fs.readFileSync(specsPath + '/template.yaml', 'utf8');
@@ -11,10 +16,10 @@ module.exports = exports = function (specsPath) {
 
 	    const directories = fs.readdirSync(specsPath);
 
-	    directories.forEach((directory: any) => {
+	    directories.forEach((directory) => {
 	        if (!directory.includes('.yaml')) {
 	            const files = fs.readdirSync(specsPath + '/' + directory);
-	            files.forEach((file: any) => {
+	            files.forEach((file) => {
 	                if (file.includes('paths')) {
 	                    paths += '  $ref: ./' + directory + '/' + file + '\n';
 	                } else {
