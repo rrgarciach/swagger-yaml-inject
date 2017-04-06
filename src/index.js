@@ -1,8 +1,9 @@
+const replaceString = require('replace-string');
+
 export default function (specsPath) {
 	if (specsPath === undefined) return console.error('ERROR: No specifications path defined.');
 	// Get document, or throw exception on error
 	try {
-	    // let indexDoc = jsyaml.safeLoad(fs.readFileSync(this.specsPath + '/index.yaml', 'utf8'));
 	    let indexDocStr = fs.readFileSync(specsPath + '/template.yaml', 'utf8');
 
 	    let paths = '';
