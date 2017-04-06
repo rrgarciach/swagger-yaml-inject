@@ -1,6 +1,6 @@
 const replaceString = require('replace-string');
 
-export default function (specsPath) {
+module.exports = exports = function (specsPath) {
 	if (specsPath === undefined) return console.error('ERROR: No specifications path defined.');
 	// Get document, or throw exception on error
 	try {
