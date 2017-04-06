@@ -1,0 +1,27 @@
+{
+  "name": "swagger-yaml-inject",
+  "version": "1.0.0",
+  "description": "Dinamically injects Swagger's YAML definitions into a bundle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "replace-string": "1.1.0",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrgarciach/swagger-yaml-inject.git"
+  },
+  "keywords": [
+    "swagger",
+    "yaml",
+    "inject"
+  ],
+  "author": "Ruy R. Garcia <rrgarciach@gmail.com> (https://github.com/rrgarciach)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrgarciach/swagger-yaml-inject/issues"
+  },
+  "homepage": "https://github.com/rrgarciach/swagger-yaml-inject#readme"
+}
