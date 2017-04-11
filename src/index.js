@@ -18,7 +18,7 @@ module.exports = exports = function (specsPath) {
 	    const directories = fs.readdirSync(specsPath);
 
 	    directories.forEach((directory) => {
-	        if (!directory.includes('.yaml')) {
+	        if (!directory.includes('.yaml') && !directory.includes('.DS_Store')) {
 	            const files = fs.readdirSync(specsPath + '/' + directory);
 	            files.forEach((file) => {
 	                if (file.includes('paths')) {
